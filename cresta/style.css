@@ -1,0 +1,199 @@
+
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+}
+.header{
+  background-color: black;
+  color: #fff;
+  height: 74px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 120px;
+  border-bottom: 1px solid #fff;
+}
+.nav-list{
+  display: flex;
+}
+.nav-item{
+  margin: 55px;
+}
+/* ファーストビュー */
+.fv{
+  background-image: url(image/fv-bgi@2x.jpg);    /* 背景画像指定 */
+  height: 90vh;
+  display:flex;               /* 横並びにしたい要素がある時に親要素に使う */
+  justify-content:center;     /* 主軸の中央 */
+  align-items:center;         /* 直行軸の中央 */
+  flex-direction:column;      /* 主軸の方向上から下 */
+}
+
+.main-copy{
+  color: #FFF;
+  font-size: 5rem;
+  font-weight: bold;    /* 太字 */
+  border: 2px solid #FFF;
+  padding: 34px 42px;
+}
+.s-conaiter{
+  margin: 100px 15% 50px;
+}
+.s-title{
+  text-align: center;
+  margin-bottom: 70px;
+
+}
+.s-log{
+  margin-top: 45px;
+  margin-bottom: 100px;
+}
+img{
+  max-width: 100%;    /* 親要素の中で常に最大100%の大きさ */
+  vertical-align: bottom;   /*  画像の下に小さな余白ができるのを防ぐ*/
+  object-fit: cover;
+}
+/* 中身１つ目 */
+.oya-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.k-item{
+  flex-basis: 45%;
+}
+.k-item h3{
+  margin-top: 0;
+}
+p{
+  font-size: 14px;
+}
+.service-log{
+  padding-bottom: 50px;
+}
+
+/* 中身２つめ */
+.oya-1{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.ko{
+  flex-basis: 45%;
+}
+.ko-oya{
+  display: flex;
+  flex-direction: row-reverse;
+  flex-basis: 100%;
+  justify-content: space-between;
+}
+.k-n-item img{
+  width: 320px;
+  /* height: 200px; */
+}
+.oya-news{
+  display: flex;
+  justify-content: space-between;
+}
+.k-n-item P{
+  border: 1px solid rgb(209, 209, 209);
+  padding: 10px 20px;
+  margin: 0;
+  box-shadow: 2px 2px 4px rgb(223, 223, 223);
+}
+.k-n-item{
+  flex-basis: 30%;
+  margin-bottom: 157px;
+}
+/* お問い合わせフォーム */
+.form{
+  max-width: 700px;
+  margin: 0 auto;
+}
+input,textarea{
+  border: 1px solid #141414;
+  padding: 10px;
+}
+.c-item{
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+label{
+  margin-bottom: 5px;
+}
+textarea{
+  resize: none;
+  height: 171px;
+}
+.c-btn{
+  text-align: center;
+  margin-top: 50px;
+}
+.i-subject,textarea{
+  line-height: 2;
+  font-size: 16px;
+}
+.form-btn{
+  display: inline-block;
+  width: 235px;
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background-color: #1B1310;
+  box-shadow: 0px 0px 6px #1B1310;
+}
+/*画面幅が480pxまでの時*/
+@media screen and (max-width: 768px){
+  .header{
+    width: 375px;
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .fv {
+    width: 100%; 
+  }
+  p.main-copy {
+    font-size: 1rem;
+  }
+  section.s-conaiter {
+    width: 375px;
+  }
+  .oya-container {
+    flex-direction: column;
+  }
+  .k-item {
+    margin-bottom: 30px;
+  }
+  p.service-log {
+    padding-bottom: 0;
+  }
+  .oya-1{
+    flex-direction: column;
+    margin: 50px 0;
+    
+  }
+  .ko-oya{
+    flex-direction: column;
+    margin: 50px 0;
+  }
+  .ko{
+    padding: 10px 0;
+  }
+  .oya-news{
+    flex-direction: column;
+  }
+  .k-n-item {
+    margin-bottom: 50px;
+  }
+  img{
+    object-fit: cover;
+  }
+}  
